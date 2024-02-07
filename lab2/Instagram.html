@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram</title>
+    <style>
+        .container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 350px;
+            height: 400px;
+            border: 1px solid rgb(187, 187, 187);
+            position: relative;
+            left: 770px;
+            top: 70px;
+
+        }
+        .logo{
+            position: relative;
+            top: 50px;
+        }
+        .input{
+            width: 240px;
+            height: 10px;
+            margin: 1px;
+            border-style: solid;
+            border-width: 1px;
+            border-color: rgb(236, 238, 243);
+            padding: 10px;
+            font-size: 15px;
+            background-color: rgb(250,250,250);
+            border-radius: 2px;
+        }
+        #login{
+                position: absolute;
+                top: 140px;
+                z-index: 1;
+            }
+        #password{
+            position: absolute;
+            top: 180px;
+            z-index: 1;
+        }
+        .log{
+            position: absolute;
+            top: 220px;
+            z-index: 1;
+            width: 260px;
+            height: 30px;
+            background-color: rgb(76,181,249);
+            color: white;
+            border-radius: 5px;
+            border: 0px;
+            font-size: 15px;
+            font-weight: bold;
+        }
+        .log:focus{
+            background-color: rgb(56, 156, 229);
+        }
+        .separator{
+            position: absolute;
+            top: 280px;
+            width: 260px;
+            height: 1px;
+            background-color: rgb(187, 187, 187);
+        }
+        .or{
+            position: absolute;
+            top: 250px;
+            background-color: white;
+            width: 50px;
+            text-align: center;
+            z-index: 2;
+            font-weight: normal;
+            font-size: 20px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            color: grey;
+        }
+        .fb{
+            position: absolute;
+            top: 300px;
+            font-size: 15px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            font-weight: bolder;
+            color: rgb(56,81,133);
+            text-decoration: none;
+            left: 120px;
+        }
+        .fblogo{
+            position: absolute;
+            top: 0px;
+            left: -25px;
+        }
+        .forgotpassword{
+            position: absolute;
+            top: 340px;
+            font-size:12px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            font-weight: normal;
+            color: rgb(42, 59, 96);
+            text-decoration: none;
+            left: 130px;
+        }
+        .signup{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            width: 350px;
+            height: 50px;
+            border: 1px solid rgb(187, 187, 187);
+            position: relative;
+            left: 770px;
+            top: 80px;
+        }
+        h4{
+            font-size: 15px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            font-weight: normal;
+            color: rgb(42, 59, 96);
+            position: relative;
+            left: 70px;
+        }
+        .downloadapp{
+            width: 20%;
+            position: relative;
+            left: 900px;
+            top: 100px;
+            font-size: 15px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            font-weight: normal;
+            color: rgb(42, 59, 96);
+
+        }
+        .link{
+            text-decoration: none;
+            color: rgb(42, 59, 96);
+            position: relative;
+            left: -100px;
+        }
+        .phones{display: flex;
+            flex-direction: row;
+            align-items: center;
+            position: absolute;
+            left: 300px;
+            top: 10px;
+        }
+        .phone1{
+            position: absolute;
+            left: 100px;
+            top: 10px;
+            width: 400px;
+        }
+        .phone2{
+            position: relative;
+            z-index: -1;
+            width: 400px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img class="logo"src="https://freelogopng.com/images/all_img/1658587465instagram-name-logo.png" alt="Instagram" height="50px"><br>
+        <input type="text" class="input" id="login" placeholder="Phone number, username, or email" required><br>
+        <input type="password" class="input" id="password" placeholder="Password" required><br>
+        <button class="log" type="submit">Log In</button>
+        <div class="separator"></div>
+        <h1 class="or">or</h1><br>
+        <a class="fb" href="google.com"><img class="fblogo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Facebook_logo_%28square%29.png/480px-Facebook_logo_%28square%29.png" alt="fb logo" width="20px">Log in Facebook</a>
+        <a class="forgotpassword" href="google.com">Forgot password?</a><br>
+    </div>
+    <div class="signup">
+        <h4>Don't have an account? <a href="google.com">Sign up</a></h4>
+    </div>
+    <div class="downloadapp">       Download app.<br>
+    <a class="link"href="google.com"><img src="https://cdn.tveda.ru/medialibrary/c2f/c2feed28bcccab5dcc99db22b702f77e/3646c1340045ed2f7aebcf1291af713e.jpg" width=150px></a><a class="link"href="google.com"><img src="https://likoris.com/wp-content/uploads/2020/06/google-play-badge.png" width=150px></a>
+    </div>
+    <div class="phones">
+        <img class="phone1" src="https://www.pngmart.com/files/23/Iphone-PNG-Isolated-Pic-Frame-PNG-Pic.png" >
+        <img class="phone2" src="https://www.pngmart.com/files/23/Iphone-PNG-Isolated-Pic-Frame-PNG-Pic.png" >
+    </div>
+</body>
+</html>
