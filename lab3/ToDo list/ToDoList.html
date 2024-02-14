@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    .topLine {
+      position: fixed;
+      top: 0;
+      left: 0;
+      margin-top: 0;
+      width: 100%;
+      height: 30px;
+      background-color: rgb(51, 49, 49);
+    }
+    .TopText {
+      position: relative;
+      left: 40px;
+      top: 8px;
+      color: rgb(229, 226, 226);
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background-color: rgb(255, 254, 254);
+    }
+
+    .texttodo {
+      position: fixed;
+      top: 60px;
+      left: 130px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+    .container{
+        position: fixed;
+        top: 120px;
+        left: 400px;
+    }
+
+    .input-container {
+      display: fixed;
+      top: 100px;
+      left: 100px;
+    }
+
+    input {
+      flex: 1;
+      padding: 8px;
+      font-size: 16px;
+      border: 1px solid rgb(200, 196, 196);
+      border-radius: 5px 0 0 5px;
+    }
+
+    button {
+      padding: 8px 12px;
+      font-size: 16px;
+      border: 1px solid rgb(200, 196, 196);
+      border-radius: 0 5px 5px 0;
+      cursor: pointer;
+      background-color: rgb(93, 93, 153);
+      color: #fff;
+    }
+
+    button:hover {
+      background-color: rgb(93, 93, 153);
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      padding: 10px;
+      margin-bottom: 5px;
+      border: 1px solid rgb(200, 196, 196);
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    li.completed {
+      background-color: rgb(152, 245, 142);
+      text-decoration: line-through;
+    }
+
+    .delete-icon {
+      width: 20px;
+      height: 20px;
+      background: url('https://cdn-icons-png.flaticon.com/512/1483/1483063.png') no-repeat center center;
+      background-size: cover;
+      cursor: pointer;
+    }
+  </style>
+  <title>ToDo List</title>
+</head>
+<body>
+  <div class="topLine">
+    <a class="TopText">ToDo List</a>
+  </div>
+  <div class="container">
+    <h1 class="texttodo">ToDo List</h1>
+    <div class="input-container">
+      <input type="text" id="taskInput" placeholder="New task">
+      <button onclick="addTask()">Add Task</button>
+    </div>
+    <ul id="taskList"></ul>
+  </div>
+  <script>
+    function addTask() {
+      var taskInput = document.getElementById('taskInput');
+      var taskList = document.getElementById('taskList');
+
+      if (taskInput.value.trim() === '') {
+        alert('Please enter a task.');
+        return;
+      }
+
+      var newTask = document.createElement('li');
+      newTask.textContent = taskInput.value;
+
+      var deleteIcon = document.createElement('span');
+      deleteIcon.classList.add('delete-icon');
+      deleteIcon.addEventListener('click', function() {
+        newTask.remove();
+      });
+
+      newTask.appendChild(deleteIcon);
+
+      taskList.appendChild(newTask);
+      taskInput.value = '';
+
+      newTask.addEventListener('click', function() {
+        newTask.classList.toggle('completed');
+      });
+    }
+  </script>
+</body>
+</html>
