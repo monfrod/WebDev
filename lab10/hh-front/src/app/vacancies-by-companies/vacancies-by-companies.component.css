@@ -1,0 +1,75 @@
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+fieldset {
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+
+fieldset input,
+fieldset button {
+  display: block;
+  margin-bottom: 10px;
+  padding: 5px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.albums-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.albums-list li {
+  margin-bottom: 20px;
+}
+
+.albums-list li div {
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.albums-list li div h2,
+.albums-list li div h3,
+.albums-list li div h5 {
+  margin: 0;
+}
+
+.albums-list li div h2 {
+  font-size: 20px;
+}
+
+.albums-list li div h3 {
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.albums-list li div h5 {
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+.delete-button {
+  padding: 5px 10px;
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.delete-button:hover {
+  background-color: #c82333;
+}
+
+.loading-message {
+  text-align: center;
+  font-style: italic;
+  color: #888;
+}

@@ -9,7 +9,7 @@ class CompanyList(generics.ListCreateAPIView):
     queryset = Company.objects.all()
     serializer_class = CompanySerializer
 
-class CompanyDetailID(generics.RetrieveAPIView):
+class CompanyDetailID(generics.RetrieveAPIView ):
     queryset = Company.objects.all()
     serializer_class = CompanySerializer
 

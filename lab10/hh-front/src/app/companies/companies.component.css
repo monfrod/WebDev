@@ -1,0 +1,65 @@
+fieldset {
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+
+fieldset input {
+  display: block;
+  margin-bottom: 10px;
+  padding: 5px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+fieldset button {
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+fieldset button:hover {
+  background-color: #0056b3;
+}
+
+.albums-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.albums-list li {
+  margin-bottom: 20px;
+}
+
+.albums__container {
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.albums__container h3 {
+  margin: 0;
+}
+
+.delete-button {
+  padding: 5px 10px;
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.delete-button:hover {
+  background-color: #c82333;
+}
+
+.loading-message {
+  text-align: center;
+  font-style: italic;
+  color: #888;
+}

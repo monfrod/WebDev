@@ -1,0 +1,38 @@
+<html>
+<body>
+
+    <div class="container">
+      <img class="logo" src='assets\logo.jpg' width="100">
+        <h1>Алматы</h1>
+        <div class="content">
+            <h2>Найди работу мечты!</h2>
+
+            <form action="#">
+                <input type="text" name="search" placeholder="Поиск...">
+                <button type="submit">Найти</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="companies">
+      <a *ngFor="let company of companies" [routerLink]="['/companies', company.name]"> {{ company.name }} </a>
+    </div>
+
+
+    <div class="companies">
+      <h2>Companies</h2>
+      <div *ngFor="let company of companies">
+        <div>
+          <h3>
+            <a [routerLink]="['/companies', company.id, 'vacancies']" [title]="company.name">{{ company.name }}</a>
+          </h3>
+          <p *ngIf="company.description">Description: {{ company.description }}</p>
+          <p *ngIf="company.city">City: {{ company.city }}</p>
+          <p *ngIf="company.address">Address: {{ company.address }}</p>
+        </div>
+      </div>
+    </div>
+
+
+</body>
+</html>

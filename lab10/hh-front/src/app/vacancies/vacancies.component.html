@@ -1,0 +1,28 @@
+<div class="container">
+  <fieldset>
+    <input type="text" [(ngModel)]="newVacancy.name" placeholder="Enter vacancy name">
+    <input type="text" [(ngModel)]="newVacancy.description" placeholder="Enter vacancy description">
+    <input type="number" [(ngModel)]="newVacancy.salary" placeholder="Enter salary">
+    <input type="text" [(ngModel)]="newVacancy.Company.id" placeholder="Enter vacancy Company id">
+    <button (click)="CreateVacancy()">Create</button>
+  </fieldset>
+
+  <div *ngIf="loaded">
+    <ul class="albums-list">
+      <li *ngFor="let vacancy of vacancies">
+        <div>
+          <h2>{{ vacancy.id }}</h2>
+          <h2>{{ vacancy.name }}</h2>
+          <h5>{{ vacancy.description }}</h5>
+          <h2>{{ vacancy.salary }}</h2>
+          <h3>{{ vacancy.Company.name }}</h3>
+          <button (click)="DeleteVacancy(vacancy.id)">Delete</button>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <p *ngIf="!loaded" class="loading-message">
+    LOADING...
+  </p>
+</div>

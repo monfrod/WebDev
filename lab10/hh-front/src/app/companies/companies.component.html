@@ -1,0 +1,22 @@
+<fieldset>
+  <input type="text" [(ngModel)]="newCompany.name" placeholder="Enter company name">
+  <input type="text" [(ngModel)]="newCompany.description" placeholder="Enter company description">
+  <input type="text" [(ngModel)]="newCompany.city" placeholder="Enter company city">
+  <input type="text" [(ngModel)]="newCompany.address" placeholder="Enter company address">
+  <button (click)="CreateCompany()">Create</button>
+</fieldset>
+
+<div *ngIf="loaded">
+  <ul class="albums-list">
+    <li *ngFor="let company of companies">
+      <div class="albums__container">
+        <h3 [routerLink]="['/companies/', company.id,'vacancies']" >{{ company.name }}</h3>
+        <button (click)="DeleteCompany(company.id)" class="delete-button">Delete</button>
+      </div>
+    </li>
+  </ul>
+</div>
+
+<p *ngIf="!loaded" class="loading-message">
+  LOADING...
+</p>

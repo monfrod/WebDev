@@ -1,0 +1,32 @@
+
+
+
+<fieldset>
+  <input type="text" [(ngModel)]="newVacancy.name" placeholder="Enter vacancy name">
+  <input type="text" [(ngModel)]="newVacancy.description" placeholder="Enter vacancy description">
+  <input type="number" [(ngModel)]="newVacancy.salary" placeholder="Enter salary">
+
+
+  <button (click)="CreateVacancy()">Create</button>
+</fieldset>
+
+<div *ngIf="loaded">
+  <h1>Company :{{company?.name}}</h1>
+  <h2>About company :{{company?.description}}</h2>
+
+  <ul class="albums-list">
+    <li *ngFor="let vacancy of vacancies">
+      <div>
+        <h2>{{vacancy.id }}</h2>
+        <h2 >{{ vacancy.name }}</h2>
+        <h5 >{{ vacancy.description }}</h5>
+        <h2 >{{ vacancy.salary}}</h2>
+        <button (click)="DeleteVacancy(vacancy.id)">Delete</button>
+      </div>
+    </li>
+  </ul>
+</div>
+
+<p *ngIf="!loaded" class="loading-message">
+  LOADING...
+</p>
